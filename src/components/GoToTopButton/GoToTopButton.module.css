@@ -1,0 +1,28 @@
+.home-button {
+  position: fixed;
+  right: 14px;
+  bottom: 14px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #275e5e;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.home-button:hover {
+  background-color: #2b7c7c;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .home-button {
+    width: 35px;
+    height: 35px;
+  }
+}

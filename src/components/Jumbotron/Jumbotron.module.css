@@ -1,0 +1,61 @@
+.jumbotron {
+  width: 100%;
+  background-image: url("../../assets/images/capadocia.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.jumbotron::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+
+.jumbotron h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 44px;
+  margin-bottom: 0;
+}
+
+.jumbotron hr {
+  width: 60%;
+  border: 1px solid white;
+}
+
+.jumbotron-description {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.jumbotron-details {
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 50px;
+  }
+  .jumbotron-details {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 425px) {
+  .jumbotron h1 {
+    font-size: 36px;
+    padding: 10px 10px;
+  }
+
+  .jumbotron-description {
+    padding: 0 20px;
+  }
+}

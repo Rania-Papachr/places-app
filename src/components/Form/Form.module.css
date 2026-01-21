@@ -1,0 +1,158 @@
+.add-container {
+  margin: 72px auto;
+  max-width: 800px;
+  text-align: center;
+  padding: 0 20px;
+}
+
+form {
+  width: 100%;
+  padding: 40px;
+  border-radius: 12px;
+  /* box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  background: #ffffff; */
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.inputs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.top-inputs-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.input-control {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 6px;
+}
+
+.input-control label {
+  color: #1d4d4d;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.hidden-file-input {
+  display: none;
+}
+
+.file-upload {
+  cursor: pointer;
+}
+
+.preview-container {
+  display: flex;
+  justify-content: center;
+}
+
+.remove-preview-button {
+  border: none;
+  height: 20px;
+  cursor: pointer;
+  background: none;
+  font-weight: bold;
+}
+
+.input-control input,
+.input-control textarea {
+  border: 1px solid #6fa8a8;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 15px;
+  font-family: inherit;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.input-control input:focus,
+.input-control textarea:focus {
+  outline: none;
+  border-color: #287171;
+  box-shadow: 0 0 0 2px rgba(40, 113, 113, 0.3);
+}
+
+.input-control textarea {
+  min-height: 100px;
+  resize: none;
+}
+
+.control-error {
+  color: #d32f2f;
+  font-size: 13px;
+  min-height: 18px;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.reset-button,
+.create-button {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.reset-button {
+  border: 2px solid #d32f2f;
+  background-color: #fff;
+  color: #d32f2f;
+}
+
+.reset-button:not(:disabled):hover {
+  background-color: #d32f2f;
+  color: #fff;
+  font-weight: 700;
+}
+
+.reset-button:disabled {
+  color: #aaa;
+  border-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.create-button {
+  border: none;
+  background-color: #287171;
+  color: #fff;
+}
+
+.create-button:hover {
+  background-color: #1f5252;
+}
+
+.create-button:disabled {
+  background-color: #9bbcbc;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+@media (max-width: 500px) {
+  .top-inputs-container {
+    flex-direction: column;
+  }
+  .form-buttons {
+    flex-direction: column;
+  }
+
+  .reset-button,
+  .create-button {
+    width: 100%;
+  }
+}
