@@ -1,5 +1,5 @@
 .add-container {
-  margin: 72px auto;
+  margin: 60px auto;
   max-width: 800px;
   text-align: center;
   padding: 0 20px;
@@ -14,6 +14,19 @@ form {
   display: flex;
   flex-direction: column;
   gap: 25px;
+}
+
+.form-title {
+  color: #1d4d4d;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .inputs-container {
