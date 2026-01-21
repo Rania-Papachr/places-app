@@ -84,6 +84,7 @@ const Form = ({ onSave }) => {
       <div className={styles["add-container"]}>
         <form onSubmit={handleSubmit(onSubmit)}>
           {/* edw den kalw thn on submit, tin dinw sto hook mou kai thn kalei afou ginoun ta validation*/}
+          <h2>Add Place</h2>
           <div className={styles["inputs-container"]}>
             <div className={styles["top-inputs-container"]}>
               <div className={styles["input-control"]}>
