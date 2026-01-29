@@ -31,30 +31,6 @@
   list-style: none;
 }
 
-.routes li a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: color 0.2s ease;
-}
-
-.navbar.navbar-scrolled .routes li a {
-  color: #333;
-}
-
-.routes li a:hover {
-  color: #4ca8af;
-}
-
-.routes li a.active {
-  color: #287171;
-  font-weight: 700;
-}
-
-.navbar.navbar-scrolled .routes li a:hover {
-  color: #287171;
-}
-
 .burger-button {
   display: none;
   background: none;
@@ -105,15 +81,5 @@
     opacity: 1;
     pointer-events: auto;
     transform: translateY(0) scale(1);
-  }
-
-  .routes li a {
-    font-size: 18px;
-    color: #275e5e;
-  }
-
-  .routes li a.active {
-    color: #287171;
-    font-weight: 700;
   }
 }

@@ -9,8 +9,6 @@ export const useFormValidation = (initialValues, validate) => {
   const [values, setValues] = useState(initialValues);
   const [errors, setErrors] = useState(initialState);
 
-  console.log(initialValues);
-
   const handleChange = (e) => {
     const { name, value, files, type } = e.target; //files gives me an array of selected files, type gives me the type of the input
 
