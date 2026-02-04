@@ -1,5 +1,5 @@
 import Jumbotron from "../Jumbotron/Jumbotron";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useFormValidation } from "../../hooks/useFormValidation";
 import { initialState } from "../../constants/initialState";
@@ -12,6 +12,7 @@ const Form = ({ onSave }) => {
 
   const fileInputRef = useRef(null);
 
+  const [isScrolled, setIsScrolled] = useState(false);
   const [preview, setPreview] = useState(null);
 
   const {
@@ -22,6 +23,22 @@ const Form = ({ onSave }) => {
     handleReset,
     isFormValid,
   } = useFormValidation(initialState, validatePlace);
+
+  const handleIsScrolled = () => {
+    if (window.scrollY >= 290) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleIsScrolled);
+
+    return () => {
+      window.removeEventListener("scroll", handleIsScrolled);
+    };
+  }, []);
 
   const removePreview = () => {
     setPreview(null);
@@ -84,6 +101,12 @@ const Form = ({ onSave }) => {
       <div className={styles["add-container"]}>
         <form onSubmit={handleSubmit(onSubmit)}>
           {/* edw den kalw thn on submit, tin dinw sto hook mou kai thn kalei afou ginoun ta validation*/}
+          <h1
+            className={`${styles["form-title"]} ${isScrolled ? styles.show : ""}`}
+          >
+            Add a new place
+          </h1>
+
           <div className={styles["inputs-container"]}>
             <div className={styles["top-inputs-container"]}>
               <div className={styles["input-control"]}>
