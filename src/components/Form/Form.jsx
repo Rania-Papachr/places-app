@@ -43,6 +43,13 @@ const Form = ({ onSave }) => {
   const removePreview = () => {
     setPreview(null);
     fileInputRef.current.value = "";
+
+    handleChange({
+      target: {
+        name: "image",
+        value: initialState.image, // reset back to null
+      },
+    });
   };
 
   const handleImageChange = (e) => {
