@@ -172,6 +172,7 @@ const Form = ({ onSave }) => {
                     alt="Preview"
                     style={{
                       width: "200px",
+                      height: "160px",
                       marginTop: "10px",
                       borderRadius: "8px",
                     }}

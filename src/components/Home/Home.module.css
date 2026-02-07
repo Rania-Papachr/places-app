@@ -6,3 +6,9 @@
   flex-wrap: wrap;
   margin: 72px;
 }
+
+@media (max-width: 426px) {
+  .all-cards {
+    margin: 58px;
+  }
+}

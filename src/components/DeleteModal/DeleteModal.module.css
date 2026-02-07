@@ -65,7 +65,7 @@
 
 .confirm-button,
 .cancel-button {
-  width: 22%;
+  width: 26%;
   padding: 6px;
   border-radius: 8px;
   font-weight: bold;
@@ -92,11 +92,4 @@
 .cancel-button:hover {
   background-color: #d32f2f;
   color: #fff;
-}
-
-@media (max-width: 320px) {
-  .cancel-button,
-  .confirm-button {
-    width: 28%;
-  }
 }
